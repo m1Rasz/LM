@@ -1,4 +1,4 @@
---------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+ï»¿--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 @import url(animate.min.css);
 @import url(normalize.css);
@@ -438,22 +438,22 @@ button {
 }
 
 .toggle_icon.active img {
-    transform: rotate(180deg); /* Obrót o 90 stopni po klikniêciu */
+    transform: rotate(180deg); /* ObrÃ³t o 90 stopni po klikniÄ™ciu */
 }
 
 .toggle_icon {
     position: relative;
     display: inline-block;
-    z-index: 1; /* Ikona bêdzie nad pseudo-elementem */
+    z-index: 1; /* Ikona bÄ™dzie nad pseudo-elementem */
 }
 
     .toggle_icon::after {
         content: "";
         position: absolute;
-        top: -5px; /* Dodanie marginesu, aby kwadrat by³ wiêkszy */
+        top: -5px; /* Dodanie marginesu, aby kwadrat byÅ‚ wiÄ™kszy */
         left: -5px;
-        width: calc(100% + 10px); /* Zwiêkszenie szerokoœci */
-        height: calc(100% + 10px); /* Zwiêkszenie wysokoœci */
+        width: calc(100% + 10px); /* ZwiÄ™kszenie szerokoÅ›ci */
+        height: calc(100% + 10px); /* ZwiÄ™kszenie wysokoÅ›ci */
         background-color: darkgrey;
         border-radius: 5px;
         opacity: 0;
@@ -600,242 +600,149 @@ a:hover {
     width: 100%;
     margin-top: 30px;
 }
+
 .fashion_title {
     text-align: left;
     font-size: 40px;
     color: #30302e;
     margin-bottom: 30px;
 }
-.carousel-inner {
-    width: 100%;
-}
 
-.row {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.large_box {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     display: flex;
-    flex-wrap: wrap; /* Zawijanie wierszy po osi¹gniêciu koñca */
-    gap: 20px; /* Odstêpy miêdzy boxami */
- /* Równomierne rozmieszczenie boxów */
-}
-@media (max-width: 768px) {
-    .box_main {
-        flex: 1 1 calc(50% - 20px); /* Dwa boxy w wierszu na mniejszych ekranach */
-    }
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-@media (max-width: 576px) {
-    .box_main {
-        flex: 1 1 100%; /* Jeden box w wierszu na bardzo ma³ych ekranach */
-    }
+.product-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
-.main-container {
-    max-width: 1500px; /* Wystarczaj¹co szeroki kontener, aby zmieœciæ cztery boxy */
-    margin: 0 auto; /* Wycentrowanie kontenera */
+.product-details h2 {
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
 }
 
-.box_main {
-    width: 350px; /* Sta³a szerokoœæ */
-    height: 200px; /* Sta³a wysokoœæ */
-    background-color: #e5e5e5;
-    margin: 5px;
-    padding: 15px;
-    box-shadow: 0px 0px 30px 10px #c6c6c6;
+
+.price-section {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    position: relative; /* Pozycja relatywna, aby móc pozycjonowaæ cenê absolutnie */
+    align-items: flex-end;
+
+    font-weight: bold;
+
+    
 }
 
-    .box_main:hover {
-        transform: scale(1.05); /* Powiêkszenie o 5% */
-        box-shadow: 0px 0 30px 10px #d1c0a4;
-    }
-
-.shirt_text {
+.cart {
     width: 100%;
-    font-size: 20px;
-    color: #30302e;
-    padding-bottom: 5px;
-}
-
-
-
-.price_text {
-    position: absolute;
-    bottom: 10px;
-    left: 15px;
+    padding: 10px 20px;
     font-size: 18px;
-    color: #262626;
-    font-weight: bold;kurpa312
-}
-
-
-
-
-.seemore_bt {
-    width: 100%;
-    float: right;
-    text-align: right;
-}
-
-    .seemore_bt a {
-        width: 100%;
-        font-size: 16px;
-        color: #262626;
-        background-color: transparent;
-        text-align: right;
-    }
-
-        .seemore_bt a:hover {
-            background-color: transparent;
-            color: #f26522;
-        }
-
-#main_slider a.carousel-control-next {
-    right: 615px;
-    top: 105%;
-}
-
-#main_slider a.carousel-control-prev {
-    left: 615px;
-    top: 105%;
-}
-
-#main_slider .carousel-control-next,
-#main_slider .carousel-control-prev {
-    width: 55px;
-    height: 55px;
-    background-color: #30302e;
-    opacity: 1;
-    font-size: 30px;
+    font-weight: bold;
     color: #ffffff;
-}
-
-    #main_slider .carousel-control-next:focus,
-    #main_slider .carousel-control-next:hover,
-    #main_slider .carousel-control-prev:focus,
-    #main_slider .carousel-control-prev:hover {
-        color: #fff;
-        background-color: #f26522;
-    }
-
-
-/* fashion section end */
-
-
-/* electronic section start */
-
-.electronic_img {
-    width: 100%;
+    background-color: #a973ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     text-align: center;
-    margin: 50px 0px;
-    min-height: 293px;
 }
 
-#electronic_main_slider a.carousel-control-next {
-    right: 615px;
-    top: 105%;
-}
-
-#electronic_main_slider a.carousel-control-prev {
-    left: 615px;
-    top: 105%;
-}
-
-#electronic_main_slider .carousel-control-next,
-#electronic_main_slider .carousel-control-prev {
-    width: 55px;
-    height: 55px;
-    background-color: #30302e;
-    opacity: 1;
-    font-size: 30px;
-    color: #ffffff;
-}
-
-    #electronic_main_slider .carousel-control-next:focus,
-    #electronic_main_slider .carousel-control-next:hover,
-    #electronic_main_slider .carousel-control-prev:focus,
-    #electronic_main_slider .carousel-control-prev:hover {
-        color: #fff;
-        background-color: #f26522;
+    .cart:hover {
+        background-color: #8b5fbf; /* Ciemniejszy kolor przy hover */
     }
 
 
-/* electronic section end */
 
 
-/* jewellery section start */
 
-.jewellery_section {
+
+
+
+
+.buy-now {
+    margin-top: 30px; /* OdstÄ™p miÄ™dzy cenÄ… a przyciskiem */
+}
+
+
+
+
+h2, h3 {
+    color: #382d5c;
+}
+
+
+.cart {
     width: 100%;
-    float: left;
-    padding-bottom: 50px;
-}
-
-.jewellery_img {
-    width: 100%;
-    text-align: center;
-    margin: 50px 0px;
-    min-height: 293px;
-}
-
-#jewellery_main_slider a.carousel-control-next {
-    right: 615px;
-    top: 75%;
-}
-
-#jewellery_main_slider a.carousel-control-prev {
-    left: 615px;
-    top: 75%;
-}
-
-#jewellery_main_slider .carousel-control-next,
-#jewellery_main_slider .carousel-control-prev {
-    width: 55px;
-    height: 55px;
-    background-color: #30302e;
-    opacity: 1;
-    font-size: 30px;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
     color: #ffffff;
+    background-color: #a973ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Dodaj pÅ‚ynne przejÅ›cie */
 }
 
-    #jewellery_main_slider .carousel-control-next:focus,
-    #jewellery_main_slider .carousel-control-next:hover,
-    #jewellery_main_slider .carousel-control-prev:focus,
-    #jewellery_main_slider .carousel-control-prev:hover {
-        color: #fff;
-        background-color: #f26522;
+    .cart:hover {
+        background-color: #a26bd8; /* ZmieÅ„ kolor tÅ‚a po najechaniu */
     }
 
-
-/* loader bar css start */
-
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
+.buy-now {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #c79eff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Dodaj pÅ‚ynne przejÅ›cie */
 }
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
+.buy-now:hover {
+        background-color: #a26bd8; /* ZmieÅ„ kolor tÅ‚a po najechaniu */
     }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
+    
 
 
-/* loader bar css end */
 
 
-/* jewellery section end */
+
+
+
+
 
 
 /* footer section start */
@@ -878,26 +785,9 @@ input.mail_bt::placeholder {
     color: #fff;
 }
 
-.subscribe_bt {
-    width: 30%;
-    float: right;
-    font-size: 16px;
-    color: #f26522;
-    background-color: transparent;
-    padding: 20px 0px 5px 0px;
-    border-radius: 30px;
-    border: 0px;
-    text-transform: uppercase;
-    text-align: right;
-}
 
-    .subscribe_bt a {
-        color: #f26522;
-    }
 
-        .subscribe_bt a:hover {
-            color: #ffffff;
-        }
+
 
 .footer_menu {
     width: 100%;

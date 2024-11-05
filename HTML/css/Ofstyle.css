@@ -1,4 +1,4 @@
---------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+ï»¿--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 @import url(animate.min.css);
 @import url(normalize.css);
@@ -438,22 +438,22 @@ button {
 }
 
 .toggle_icon.active img {
-    transform: rotate(180deg); /* Obrót o 90 stopni po klikniêciu */
+    transform: rotate(180deg); /* ObrÃ³t o 90 stopni po klikniÄ™ciu */
 }
 
 .toggle_icon {
     position: relative;
     display: inline-block;
-    z-index: 1; /* Ikona bêdzie nad pseudo-elementem */
+    z-index: 1; /* Ikona bÄ™dzie nad pseudo-elementem */
 }
 
     .toggle_icon::after {
         content: "";
         position: absolute;
-        top: -5px; /* Dodanie marginesu, aby kwadrat by³ wiêkszy */
+        top: -5px; /* Dodanie marginesu, aby kwadrat byÅ‚ wiÄ™kszy */
         left: -5px;
-        width: calc(100% + 10px); /* Zwiêkszenie szerokoœci */
-        height: calc(100% + 10px); /* Zwiêkszenie wysokoœci */
+        width: calc(100% + 10px); /* ZwiÄ™kszenie szerokoÅ›ci */
+        height: calc(100% + 10px); /* ZwiÄ™kszenie wysokoÅ›ci */
         background-color: darkgrey;
         border-radius: 5px;
         opacity: 0;
@@ -600,62 +600,193 @@ a:hover {
     width: 100%;
     margin-top: 30px;
 }
+
 .fashion_title {
     text-align: left;
     font-size: 40px;
     color: #30302e;
     margin-bottom: 30px;
 }
-.carousel-inner {
-    width: 100%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-container {
+    
+    border-radius: 5px; /* ZaokrÄ…glone rogi */
+    padding: 15px; /* Zmniejszony padding */
+    margin-bottom: 20px; /* OdstÄ™p miÄ™dzy oknami */
+    background-color: #f9f9f9; /* Kolor tÅ‚a */
+    width: 600px; /* Zmniejszenie szerokoÅ›ci okna */
+    max-width: 100%; /* UmoÅ¼liwienie responsywnoÅ›ci */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* CieÅ„ dla estetyki */
+}
+.purchase-container {
+    
+    border-radius: 5px; /* ZaokrÄ…glone rogi */
+    padding: 20px; /* Padding wewnÄ™trzny */
+    margin-bottom: 20px; /* OdstÄ™p miÄ™dzy oknami */
+    background-color: #f9f9f9; /* Kolor tÅ‚a */
+    width: 400px
+}
+.product-container, .purchase-container {
+    
+    border-radius: 5px; /* ZaokrÄ…glone rogi */
+    padding: 20px; /* Padding wewnÄ™trzny */
+    margin-bottom: 20px; /* OdstÄ™p miÄ™dzy oknami */
+    background-color: #f9f9f9; /* Kolor tÅ‚a */
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap; /* Zawijanie wierszy po osi¹gniêciu koñca */
-    gap: 20px; /* Odstêpy miêdzy boxami */
- /* Równomierne rozmieszczenie boxów */
+
+.product-info {
+    text-align: left; /* WyrÃ³wnanie tekstu do lewej w caÅ‚ej sekcji produktu */
+    
 }
-@media (max-width: 768px) {
-    .box_main {
-        flex: 1 1 calc(50% - 20px); /* Dwa boxy w wierszu na mniejszych ekranach */
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+    .details.show {
+        max-height: 500px;
+        opacity: 1;
     }
-}
 
-@media (max-width: 576px) {
-    .box_main {
-        flex: 1 1 100%; /* Jeden box w wierszu na bardzo ma³ych ekranach */
-    }
+.view-more {
+    background-color: #8f7dff;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block; /* Spraw, aby przycisk byÅ‚ blokowy */
 }
-
-.main-container {
-    max-width: 1500px; /* Wystarczaj¹co szeroki kontener, aby zmieœciæ cztery boxy */
-    margin: 0 auto; /* Wycentrowanie kontenera */
-}
-
-.box_main {
-    width: 350px; /* Sta³a szerokoœæ */
-    height: 200px; /* Sta³a wysokoœæ */
+.large_box {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
     background-color: #e5e5e5;
-    margin: 5px;
-    padding: 15px;
-    box-shadow: 0px 0px 30px 10px #c6c6c6;
+    box-shadow: 0px 0px 30px 10px #382d5c;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative; /* Pozycja relatywna, aby móc pozycjonowaæ cenê absolutnie */
+    gap: 20px; /* OdstÄ™p miÄ™dzy kolumnami */
 }
 
-    .box_main:hover {
-        transform: scale(1.05); /* Powiêkszenie o 5% */
-        box-shadow: 0px 0 30px 10px #d1c0a4;
+.purchase-info {
+    text-align: left; /* WyrÃ³wnanie tekstu do lewej */
+    padding: 10px; /* Opcjonalnie dodaj padding */
+}
+
+.total-amount {
+    margin: 0; /* UsuÅ„ marginesy, aby tekst byÅ‚ blisko krawÄ™dzi */
+    font-size: 1.2em; /* Opcjonalnie zwiÄ™ksz rozmiar czcionki */
+}
+.payment {
+    margin: 25px 0; /* UsuÅ„ marginesy, aby tekst byÅ‚ blisko krawÄ™dzi */
+    font-size: 1.2em; /* Opcjonalnie zwiÄ™ksz rozmiar czcionki */
+}
+
+    .buy-now {
+        margin-top: 30px; /* OdstÄ™p miÄ™dzy cenÄ… a przyciskiem */
     }
 
-.shirt_text {
+h2, h3 {
+    color: #382d5c;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .quantity-control button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #ff0000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+.cart {
     width: 100%;
-    font-size: 20px;
-    color: #30302e;
-    padding-bottom: 5px;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #a973ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Dodaj pÅ‚ynne przejÅ›cie */
+}
+.cart:hover {
+    background-color: #a26bd8; /* ZmieÅ„ kolor tÅ‚a po najechaniu */
+}
+
+.buy-now {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #c79eff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Dodaj pÅ‚ynne przejÅ›cie */
+}
+
+    .buy-now:hover {
+        background-color: #a26bd8; /* ZmieÅ„ kolor tÅ‚a po najechaniu */
+    }
+
+.seller-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-btn {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -666,11 +797,40 @@ a:hover {
     left: 15px;
     font-size: 18px;
     color: #262626;
-    font-weight: bold;kurpa312
+    font-weight: bold;
+    kurpa312
 }
 
+.tshirt_img {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px;
+    min-height: 370px;
+}
 
+.btn_main {
+    width: 100%;
+    display: flex;
+}
 
+.buy_bt {
+    float: left;
+    width: 100%;
+}
+
+    .buy_bt a {
+        width: 100%;
+        font-size: 16px;
+        color: #f26522;
+        background-color: transparent;
+        text-align: right;
+        font-weight: bold;
+    }
+
+        .buy_bt a:hover {
+            background-color: transparent;
+            color: #262626;
+        }
 
 .seemore_bt {
     width: 100%;

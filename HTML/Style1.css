@@ -1,0 +1,18 @@
+﻿body
+{
+
+}
+.box_main {
+    width: 350px; /* Stała szerokość */
+    height: 200px; /* Stała wysokość */
+    background-color: #e5e5e5;
+    margin: 5px;
+    padding: 15px;
+    box-shadow: 0px 0 30px 10px #c6c6c6;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative; /* Ustawienie pozycji relatywnej, aby cena była w dolnym lewym rogu */
+    display: flex;
+    flex-direction: column;
+}

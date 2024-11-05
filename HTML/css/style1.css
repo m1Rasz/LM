@@ -1,5 +1,6 @@
 --------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
 @import url(animate.min.css);
 @import url(normalize.css);
 @import url(icomoon.css);
@@ -11,7 +12,9 @@
 @import url(jquery.fancybox.min.css);
 @import url(jquery-ui.css);
 @import url(nice-select.css);
+
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
 * {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
@@ -97,7 +100,7 @@ h4 a,
 h5 a,
 h6 a {
     color: #212121;
-    text-decoration: none !important;
+    text-decoration: none!important;
     opacity: 1
 }
 
@@ -142,7 +145,7 @@ img {
     height: auto;
 }
 
-:focus {
+ :focus {
     outline: 0;
 }
 
@@ -238,26 +241,26 @@ button {
     text-align: center;
 }
 
-    .custom_menu ul {
-        margin: 0px;
-        padding: 0px;
-        display: inline-block;
-    }
+.custom_menu ul {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
 
-    .custom_menu li {
-        float: left;
-        font-size: 16px;
-        color: #f1f1f1;
-        padding: 6px 10px 0px 10px;
-    }
+.custom_menu li {
+    float: left;
+    font-size: 16px;
+    color: #f1f1f1;
+    padding: 6px 10px 0px 10px;
+}
 
-        .custom_menu li a {
-            color: #f1f1f1;
-        }
+.custom_menu li a {
+    color: #f1f1f1;
+}
 
-            .custom_menu li a:hover {
-                color: #f26522;
-            }
+.custom_menu li a:hover {
+    color: #f26522;
+}
 
 
 /* header top section end */
@@ -272,8 +275,11 @@ button {
 
 .logo {
     width: 100%;
+    
+ 
     float: left;
     text-align: center;
+    
 }
 
 
@@ -307,35 +313,34 @@ button {
     padding-top: 60px;
 }
 
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 20px;
-        color: #ffffff;
-        display: block;
-        transition: 0.3s;
-    }
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
 
-        .sidenav a:hover {
-            color: #f26522;
-        }
+.sidenav a:hover {
+    color: #f26522;
+}
 
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
     }
-
-        .sidenav a {
-            font-size: 18px;
-        }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 .toggle_icon {
@@ -368,13 +373,13 @@ button {
     border-color: #30302e;
 }
 
-    .btn-secondary:hover {
-        color: #fff;
-        background-color: #30302e;
-        border-color: #30302e;
-    }
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #30302e;
+    border-color: #30302e;
+}
 
-.show > .btn-secondary.dropdown-toggle:focus {
+.show>.btn-secondary.dropdown-toggle:focus {
     box-shadow: none;
 }
 
@@ -419,19 +424,19 @@ button {
     float: right;
 }
 
-    .login_menu ul {
-        margin: 0px;
-        padding: 5px;
-    }
+.login_menu ul {
+    margin: 0px;
+    padding: 5px;
+}
 
-    .login_menu li {
-        float: left;
-        font-size: 16px;
-        color: #ffffff;
-        text-transform: uppercase;
-        padding-left: 10px;
-        padding-top: 4px;
-    }
+.login_menu li {
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-top: 4px;
+}
 
 .toggle_icon img {
     transition: transform 0.5s; /* Animacja obrotu */
@@ -440,38 +445,35 @@ button {
 .toggle_icon.active img {
     transform: rotate(180deg); /* Obrót o 90 stopni po klikniêciu */
 }
-
 .toggle_icon {
     position: relative;
     display: inline-block;
     z-index: 1; /* Ikona bêdzie nad pseudo-elementem */
 }
-
-    .toggle_icon::after {
-        content: "";
-        position: absolute;
-        top: -5px; /* Dodanie marginesu, aby kwadrat by³ wiêkszy */
-        left: -5px;
-        width: calc(100% + 10px); /* Zwiêkszenie szerokoœci */
-        height: calc(100% + 10px); /* Zwiêkszenie wysokoœci */
-        background-color: darkgrey;
-        border-radius: 5px;
-        opacity: 0;
-        transition: opacity 0.3s;
-        z-index: -1;
-    }
-
-    .toggle_icon:hover::after {
-        opacity: 1; /* Widoczne przy najechaniu */
-    }
+.toggle_icon::after {
+    content: "";
+    position: absolute;
+    top: -5px; /* Dodanie marginesu, aby kwadrat by³ wiêkszy */
+    left: -5px;
+    width: calc(100% + 10px); /* Zwiêkszenie szerokoœci */
+    height: calc(100% + 10px); /* Zwiêkszenie wysokoœci */
+    background-color: darkgrey;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+}
+.toggle_icon:hover::after {
+    opacity: 1; /* Widoczne przy najechaniu */
+}
 
 .login_menu li a {
     color: #ffffff;
 }
 
-    .login_menu li a:hover {
-        color: #f26522;
-    }
+.login_menu li a:hover {
+    color: #f26522;
+}
 
 .padding_10 {
     padding-left: 10px;
@@ -487,7 +489,6 @@ button {
     border-radius: 5px;
     margin-right: 20px;
 }
-
 }
 
 .nav-link {
@@ -530,23 +531,23 @@ a:hover {
     padding-top: 30px;
 }
 
-    .buynow_bt a {
-        width: 100%;
-        float: left;
-        font-size: 16px;
-        color: #ffffff;
-        background-color: #252525;
-        text-align: center;
-        padding: 10px 0px;
-        border-radius: 5px;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
+.buynow_bt a {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #252525;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
-        .buynow_bt a:hover {
-            background-color: #f26522;
-            color: #ffffff;
-        }
+.buynow_bt a:hover {
+    background-color: #f26522;
+    color: #ffffff;
+}
 
 #my_slider a.carousel-control-next {
     right: 0px;
@@ -569,12 +570,12 @@ a:hover {
     border-radius: 100px;
 }
 
-    #my_slider .carousel-control-next:focus,
-    #my_slider .carousel-control-next:hover,
-    #my_slider .carousel-control-prev:focus,
-    #my_slider .carousel-control-prev:hover {
-        color: #fff;
-    }
+#my_slider .carousel-control-next:focus,
+#my_slider .carousel-control-next:hover,
+#my_slider .carousel-control-prev:focus,
+#my_slider .carousel-control-prev:hover {
+    color: #fff;
+}
 
 
 /* banner section end */
@@ -599,51 +600,49 @@ a:hover {
 .fashion_section_2 {
     width: 100%;
     margin-top: 30px;
+
 }
-.fashion_title {
-    text-align: left;
-    font-size: 40px;
-    color: #30302e;
-    margin-bottom: 30px;
-}
+
 .carousel-inner {
     width: 100%;
 }
-
-.row {
-    display: flex;
-    flex-wrap: wrap; /* Zawijanie wierszy po osi¹gniêciu koñca */
-    gap: 20px; /* Odstêpy miêdzy boxami */
- /* Równomierne rozmieszczenie boxów */
+.add_acc {
+    width: 60px; /* Sta³a szerokoœæ */
+    height: 10px; /* Sta³a wysokoœæ */
+    cursor: pointer;
 }
-@media (max-width: 768px) {
-    .box_main {
-        flex: 1 1 calc(50% - 20px); /* Dwa boxy w wierszu na mniejszych ekranach */
-    }
+.modal {
+    display: none; /* Ukryte na pocz¹tku */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
-
-@media (max-width: 576px) {
-    .box_main {
-        flex: 1 1 100%; /* Jeden box w wierszu na bardzo ma³ych ekranach */
-    }
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
 }
-
-.main-container {
-    max-width: 1500px; /* Wystarczaj¹co szeroki kontener, aby zmieœciæ cztery boxy */
-    margin: 0 auto; /* Wycentrowanie kontenera */
-}
-
 .box_main {
     width: 350px; /* Sta³a szerokoœæ */
     height: 200px; /* Sta³a wysokoœæ */
     background-color: #e5e5e5;
     margin: 5px;
     padding: 15px;
-    box-shadow: 0px 0px 30px 10px #c6c6c6;
+    box-shadow: 0px 0 30px 10px #c6c6c6;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative; /* Ustawienie pozycji relatywnej, aby cena by³a w dolnym lewym rogu */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    position: relative; /* Pozycja relatywna, aby móc pozycjonowaæ cenê absolutnie */
 }
 
     .box_main:hover {
@@ -655,22 +654,54 @@ a:hover {
     width: 100%;
     font-size: 20px;
     color: #30302e;
+    
+
     padding-bottom: 5px;
 }
-
-
-
-.price_text {
-    position: absolute;
-    bottom: 10px;
-    left: 15px;
-    font-size: 18px;
-    color: #262626;
-    font-weight: bold;kurpa312
+.price_container {
+    position: absolute; /* Ustawienie absolutne */
+    bottom: 0; /* Ustawienie bezpoœrednio przy dolnej krawêdzi */
+    left: 0; /* Ustawienie bezpoœrednio przy lewej krawêdzi */
+    padding: 10px 20px; /* Opcjonalne wewnêtrzne odstêpy dla estetyki */
+    background-color: #e5e5e5; /* Dopasowanie t³a do karty */
 }
 
+.price_text {
+    margin: 0;
+    font-weight: bold;
+    color: #262626;
+}
 
+.tshirt_img {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px;
+    min-height: 370px;
+}
 
+.btn_main {
+    width: 100%;
+    display: flex;
+}
+
+.buy_bt {
+    float: left;
+    width: 100%;
+}
+
+.buy_bt a {
+    width: 100%;
+    font-size: 16px;
+    color: #f26522;
+    background-color: transparent;
+    text-align: right;
+    font-weight: bold;
+}
+
+.buy_bt a:hover {
+    background-color: transparent;
+    color: #262626;
+}
 
 .seemore_bt {
     width: 100%;
@@ -678,18 +709,18 @@ a:hover {
     text-align: right;
 }
 
-    .seemore_bt a {
-        width: 100%;
-        font-size: 16px;
-        color: #262626;
-        background-color: transparent;
-        text-align: right;
-    }
+.seemore_bt a {
+    width: 100%;
+    font-size: 16px;
+    color: #262626;
+    background-color: transparent;
+    text-align: right;
+}
 
-        .seemore_bt a:hover {
-            background-color: transparent;
-            color: #f26522;
-        }
+.seemore_bt a:hover {
+    background-color: transparent;
+    color: #f26522;
+}
 
 #main_slider a.carousel-control-next {
     right: 615px;
@@ -711,13 +742,13 @@ a:hover {
     color: #ffffff;
 }
 
-    #main_slider .carousel-control-next:focus,
-    #main_slider .carousel-control-next:hover,
-    #main_slider .carousel-control-prev:focus,
-    #main_slider .carousel-control-prev:hover {
-        color: #fff;
-        background-color: #f26522;
-    }
+#main_slider .carousel-control-next:focus,
+#main_slider .carousel-control-next:hover,
+#main_slider .carousel-control-prev:focus,
+#main_slider .carousel-control-prev:hover {
+    color: #fff;
+    background-color: #f26522;
+}
 
 
 /* fashion section end */
@@ -752,13 +783,13 @@ a:hover {
     color: #ffffff;
 }
 
-    #electronic_main_slider .carousel-control-next:focus,
-    #electronic_main_slider .carousel-control-next:hover,
-    #electronic_main_slider .carousel-control-prev:focus,
-    #electronic_main_slider .carousel-control-prev:hover {
-        color: #fff;
-        background-color: #f26522;
-    }
+#electronic_main_slider .carousel-control-next:focus,
+#electronic_main_slider .carousel-control-next:hover,
+#electronic_main_slider .carousel-control-prev:focus,
+#electronic_main_slider .carousel-control-prev:hover {
+    color: #fff;
+    background-color: #f26522;
+}
 
 
 /* electronic section end */
@@ -799,23 +830,41 @@ a:hover {
     color: #ffffff;
 }
 
-    #jewellery_main_slider .carousel-control-next:focus,
-    #jewellery_main_slider .carousel-control-next:hover,
-    #jewellery_main_slider .carousel-control-prev:focus,
-    #jewellery_main_slider .carousel-control-prev:hover {
-        color: #fff;
-        background-color: #f26522;
-    }
+#jewellery_main_slider .carousel-control-next:focus,
+#jewellery_main_slider .carousel-control-next:hover,
+#jewellery_main_slider .carousel-control-prev:focus,
+#jewellery_main_slider .carousel-control-prev:hover {
+    color: #fff;
+    background-color: #f26522;
+}
 
 
 /* loader bar css start */
 
+.loader_main {
+    width: 100%;
+    text-align: center;
+    margin-top: 140px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #414744;
+    border-right: 16px solid #f26522;
+    border-bottom: 16px solid #414744;
+    border-left: 16px solid #f26522;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 6s linear infinite;
+    margin: 0 auto;
+}
 
 @-webkit-keyframes spin {
     0% {
         -webkit-transform: rotate(0deg);
     }
-
     100% {
         -webkit-transform: rotate(360deg);
     }
@@ -825,7 +874,6 @@ a:hover {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
@@ -891,13 +939,13 @@ input.mail_bt::placeholder {
     text-align: right;
 }
 
-    .subscribe_bt a {
-        color: #f26522;
-    }
+.subscribe_bt a {
+    color: #f26522;
+}
 
-        .subscribe_bt a:hover {
-            color: #ffffff;
-        }
+.subscribe_bt a:hover {
+    color: #ffffff;
+}
 
 .footer_menu {
     width: 100%;
@@ -905,26 +953,26 @@ input.mail_bt::placeholder {
     text-align: center;
 }
 
-    .footer_menu ul {
-        margin: 0px;
-        padding: 0px;
-        display: inline-block;
-    }
+.footer_menu ul {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
 
-    .footer_menu li {
-        float: left;
-        font-size: 16px;
-        color: #f1f1f1;
-        padding: 20px 10px 0px 10px;
-    }
+.footer_menu li {
+    float: left;
+    font-size: 16px;
+    color: #f1f1f1;
+    padding: 20px 10px 0px 10px;
+}
 
-        .footer_menu li a {
-            color: #f1f1f1;
-        }
+.footer_menu li a {
+    color: #f1f1f1;
+}
 
-            .footer_menu li a:hover {
-                color: #f26522;
-            }
+.footer_menu li a:hover {
+    color: #f26522;
+}
 
 .location_main {
     width: 100%;
@@ -940,13 +988,13 @@ input.mail_bt::placeholder {
     padding: 30px 30px 30px 30px;
 }
 
-    .location_main a {
-        color: #ffffff;
-    }
+.location_main a {
+    color: #ffffff;
+}
 
-        .location_main a:hover {
-            color: #f26522;
-        }
+.location_main a:hover {
+    color: #f26522;
+}
 
 
 /* footer section end */
@@ -970,13 +1018,13 @@ input.mail_bt::placeholder {
     margin: 20px 0px;
 }
 
-    .copyright_text a {
-        color: #ffffff;
-    }
+.copyright_text a {
+    color: #ffffff;
+}
 
-        .copyright_text a:hover {
-            color: #f26522;
-        }
+.copyright_text a:hover {
+    color: #f26522;
+}
 
 .margin_top90 {
     margin-top: 90px;

@@ -153,17 +153,15 @@
     </div>
     <!-- banner bg main end -->
     <!-- fashion section start -->
-    <div class="fashion_section">
+    <div class="spinning_section">
         <div id="main_slider" class="carousel slide" data-ride="carousel">
             <div class="main-container">
-                <h1 class="fashion_title">Konta cs2</h1>
+                <h1 class="spinning_title">Konta cs2</h1>
                 <div class="row" id="oferty-container">
-                    
 
+                    
                 </div>
             </div>
-
-
             <!-- Nawigacja slidera -->
             <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
                 <i class="fa fa-angle-left"></i>
@@ -228,16 +226,17 @@
                     ofertaDiv.classList.add('box_main');
 
                     ofertaDiv.innerHTML = `
-                        <a href="${oferta.link}">
-                            <h4 class="shirt_text">${oferta.nazwa}</h4>
-                            <p class="price_text">${oferta.cena}</p>
-                        </a>
-                    `;
+                            <a href="${oferta.link}">
+                                <h4 class="name_text">${oferta.nazwa}</h4>
+                                <p class="price_text">${oferta.cena}</p>
+                            </a>
+                        `;
 
                     ofertyContainer.appendChild(ofertaDiv);
                 });
             })
             .catch(error => console.error('Błąd przy wczytywaniu ofert:', error));
     </script>
+   
 </body>
 </html>

@@ -1,18 +1,4 @@
-﻿--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
-/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
-@import url(animate.min.css);
-@import url(normalize.css);
-@import url(icomoon.css);
-@import url(css/font-awesome.min.css);
-@import url(meanmenu.css);
-@import url(owl.carousel.min.css);
-@import url(swiper.min.css);
-@import url(slick.css);
-@import url(jquery.fancybox.min.css);
-@import url(jquery-ui.css);
-@import url(nice-select.css);
-/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
-* {
+﻿* {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
 }
@@ -221,7 +207,7 @@ button {
 /* banner bg main end */
 
 
-/* header top section start */
+/* header top  start */
 
 .header_section_top {
     width: 100%;
@@ -237,50 +223,38 @@ button {
     margin: 0 auto;
     text-align: center;
 }
-
-    .custom_menu ul {
+.custom_menu ul {
         margin: 0px;
         padding: 0px;
         display: inline-block;
     }
-
-    .custom_menu li {
+.custom_menu li {
         float: left;
         font-size: 16px;
         color: #f1f1f1;
         padding: 6px 10px 0px 10px;
     }
-
-        .custom_menu li a {
+.custom_menu li a {
             color: #f1f1f1;
         }
-
-            .custom_menu li a:hover {
+.custom_menu li a:hover {
                 color: #f26522;
-            }
+            } 
+            
+        
+       
+    
 
 
-/* header top section end */
+/* header top  end */
 
 
-/* logo section start */
-
-.logo_section {
-    width: 100%;
-    float: left;
-}
-
-.logo {
-    width: 100%;
-    float: left;
-    text-align: center;
-}
 
 
-/* logo section end */
 
 
-/* header section start */
+
+/* header  start */
 
 .header_section {
     width: 100%;
@@ -292,222 +266,10 @@ button {
 }
 
 
-/* opennav bar start */
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 20px;
-        color: #ffffff;
-        display: block;
-        transition: 0.3s;
-    }
-
-        .sidenav a:hover {
-            color: #f26522;
-        }
-
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-        .sidenav a {
-            font-size: 18px;
-        }
-}
-
-.toggle_icon {
-    padding: 5px;
-    cursor: pointer;
-    color: #ffffff;
-    order: 2;
-}
-
-.header_box {
-    order: 2;
-    display: flex;
-}
-
-.dropdown,
-.dropleft,
-.dropright,
-.dropup {
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-    display: inline-block;
-    margin-left: 30px;
-    order: 2;
-}
-
-.btn-secondary {
-    color: #fff;
-    background-color: #30302e;
-    border-color: #30302e;
-}
-
-    .btn-secondary:hover {
-        color: #fff;
-        background-color: #30302e;
-        border-color: #30302e;
-    }
-
-.show > .btn-secondary.dropdown-toggle:focus {
-    box-shadow: none;
-}
+/* header end */
 
 
-/* opennav bar end */
-
-
-/* Styles for wrapping the search box start */
-
-.main {
-    flex: 1;
-    margin: 0px 30px;
-    display: inline-block;
-    order: 2;
-}
-
-
-/* Bootstrap 4 text input with search icon */
-
-.has-search .form-control {
-    padding-left: 2.375rem;
-}
-
-.has-search .form-control-feedback {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
-    text-align: center;
-    pointer-events: none;
-    color: #aaa;
-}
-
-
-/* Styles for wrapping the search box end */
-
-.login_menu {
-    display: flex;
-    text-align: right;
-    float: right;
-}
-
-    .login_menu ul {
-        margin: 0px;
-        padding: 5px;
-    }
-
-    .login_menu li {
-        float: left;
-        font-size: 16px;
-        color: #ffffff;
-        text-transform: uppercase;
-        padding-left: 10px;
-        padding-top: 4px;
-    }
-
-.toggle_icon img {
-    transition: transform 0.5s; /* Animacja obrotu */
-}
-
-.toggle_icon.active img {
-    transform: rotate(180deg); /* Obrót o 90 stopni po kliknięciu */
-}
-
-.toggle_icon {
-    position: relative;
-    display: inline-block;
-    z-index: 1; /* Ikona będzie nad pseudo-elementem */
-}
-
-    .toggle_icon::after {
-        content: "";
-        position: absolute;
-        top: -5px; /* Dodanie marginesu, aby kwadrat był większy */
-        left: -5px;
-        width: calc(100% + 10px); /* Zwiększenie szerokości */
-        height: calc(100% + 10px); /* Zwiększenie wysokości */
-        background-color: darkgrey;
-        border-radius: 5px;
-        opacity: 0;
-        transition: opacity 0.3s;
-        z-index: -1;
-    }
-
-    .toggle_icon:hover::after {
-        opacity: 1; /* Widoczne przy najechaniu */
-    }
-
-.login_menu li a {
-    color: #ffffff;
-}
-
-    .login_menu li a:hover {
-        color: #f26522;
-    }
-
-.padding_10 {
-    padding-left: 10px;
-}
-
-
-/* flage css start */
-
-.lang_box {
-    display: flex;
-    float: right;
-    background: #fff;
-    border-radius: 5px;
-    margin-right: 20px;
-}
-
-}
-
-.nav-link {
-    display: block;
-    padding: .4rem 1rem;
-}
-
-a:hover {
-    color: #f26522;
-    text-decoration: underline;
-}
-
-
-/* flage css end */
-
-
-/* header section end */
-
-
-/* banner section start */
+/* banner  start */
 
 .banner_section {
     width: 100%;
@@ -529,8 +291,7 @@ a:hover {
     margin: 0 auto;
     padding-top: 30px;
 }
-
-    .buynow_bt a {
+.buynow_bt a {
         width: 100%;
         float: left;
         font-size: 16px;
@@ -542,11 +303,12 @@ a:hover {
         text-transform: uppercase;
         font-weight: bold;
     }
-
-        .buynow_bt a:hover {
+.buynow_bt a:hover {
             background-color: #f26522;
             color: #ffffff;
         }
+        
+    
 
 #my_slider a.carousel-control-next {
     right: 0px;
@@ -577,45 +339,7 @@ a:hover {
     }
 
 
-/* banner section end */
-
-
-/* fashion section start */
-
-.fashion_section {
-    width: 100%;
-    float: left;
-    padding-bottom: 150px;
-}
-
-.fashion_taital {
-    width: 100%;
-    font-size: 40px;
-    color: #30302e;
-    text-align: center;
-    font-weight: bold;
-}
-
-.fashion_section_2 {
-    width: 100%;
-    margin-top: 30px;
-}
-
-.fashion_title {
-    text-align: left;
-    font-size: 40px;
-    color: #30302e;
-    margin-bottom: 30px;
-}
-
-
-
-
-
-
-
-
-
+/* banner  end */
 
 
 
@@ -627,33 +351,33 @@ a:hover {
 
 .product-container {
     
-    border-radius: 5px; /* Zaokrąglone rogi */
-    padding: 15px; /* Zmniejszony padding */
-    margin-bottom: 20px; /* Odstęp między oknami */
-    background-color: #f9f9f9; /* Kolor tła */
-    width: 600px; /* Zmniejszenie szerokości okna */
-    max-width: 100%; /* Umożliwienie responsywności */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Cień dla estetyki */
+    border-radius: 5px; 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    background-color: #f9f9f9; 
+    width: 600px; 
+    max-width: 100%; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .purchase-container {
     
-    border-radius: 5px; /* Zaokrąglone rogi */
-    padding: 20px; /* Padding wewnętrzny */
-    margin-bottom: 20px; /* Odstęp między oknami */
-    background-color: #f9f9f9; /* Kolor tła */
+    border-radius: 5px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    background-color: #f9f9f9; 
     width: 400px
 }
 .product-container, .purchase-container {
     
-    border-radius: 5px; /* Zaokrąglone rogi */
-    padding: 20px; /* Padding wewnętrzny */
-    margin-bottom: 20px; /* Odstęp między oknami */
-    background-color: #f9f9f9; /* Kolor tła */
+    border-radius: 5px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    background-color: #f9f9f9; 
 }
 
 
 .product-info {
-    text-align: left; /* Wyrównanie tekstu do lewej w całej sekcji produktu */
+    text-align: left; 
     
 }
 
@@ -677,7 +401,7 @@ a:hover {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    display: block; /* Spraw, aby przycisk był blokowy */
+    display: block; 
 }
 .large_box {
     width: 90%;
@@ -687,27 +411,27 @@ a:hover {
     background-color: #e5e5e5;
     box-shadow: 0px 0px 30px 10px #382d5c;
     display: flex;
-    gap: 20px; /* Odstęp między kolumnami */
+    gap: 20px; 
 }
 
 .purchase-info {
-    text-align: left; /* Wyrównanie tekstu do lewej */
-    padding: 10px; /* Opcjonalnie dodaj padding */
+    text-align: left; 
+    padding: 10px; 
 }
 
 .total-amount {
-    margin: 0; /* Usuń marginesy, aby tekst był blisko krawędzi */
-    font-size: 1.2em; /* Opcjonalnie zwiększ rozmiar czcionki */
+    margin: 0; 
+    font-size: 1.2em; 
 }
 .payment {
-    margin: 25px 0; /* Usuń marginesy, aby tekst był blisko krawędzi */
-    font-size: 1.2em; /* Opcjonalnie zwiększ rozmiar czcionki */
+    margin: 25px 0; 
+    font-size: 1.2em; 
+}
+.buy-now {
+    margin-top: 30px;
 }
 
-    .buy-now {
-        margin-top: 30px; /* Odstęp między ceną a przyciskiem */
-    }
-
+    
 h2, h3 {
     color: #382d5c;
 }
@@ -717,8 +441,7 @@ h2, h3 {
     align-items: center;
     gap: 10px;
 }
-
-    .quantity-control button {
+.quantity-control button {
         width: 30px;
         height: 30px;
         font-size: 16px;
@@ -728,6 +451,7 @@ h2, h3 {
         border-radius: 5px;
         cursor: pointer;
     }
+    
 
 .total-amount {
     font-size: 18px;
@@ -745,10 +469,10 @@ h2, h3 {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Dodaj płynne przejście */
+    transition: background-color 0.3s ease; 
 }
 .cart:hover {
-    background-color: #a26bd8; /* Zmień kolor tła po najechaniu */
+    background-color: #a26bd8; 
 }
 
 .buy-now {
@@ -761,12 +485,12 @@ h2, h3 {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Dodaj płynne przejście */
+    transition: background-color 0.3s ease; 
 }
-
-    .buy-now:hover {
-        background-color: #a26bd8; /* Zmień kolor tła po najechaniu */
+.buy-now:hover {
+        background-color: #a26bd8; 
     }
+    
 
 .seller-info {
     text-align: center;
@@ -817,8 +541,7 @@ h2, h3 {
     float: left;
     width: 100%;
 }
-
-    .buy_bt a {
+.buy_bt a {
         width: 100%;
         font-size: 16px;
         color: #f26522;
@@ -826,30 +549,31 @@ h2, h3 {
         text-align: right;
         font-weight: bold;
     }
-
-        .buy_bt a:hover {
+.buy_bt a:hover {
             background-color: transparent;
             color: #262626;
         }
+        
+    
 
 .seemore_bt {
     width: 100%;
     float: right;
     text-align: right;
 }
-
-    .seemore_bt a {
+.seemore_bt a {
         width: 100%;
         font-size: 16px;
         color: #262626;
         background-color: transparent;
         text-align: right;
     }
-
-        .seemore_bt a:hover {
+.seemore_bt a:hover {
             background-color: transparent;
             color: #f26522;
-        }
+        }   
+
+        
 
 #main_slider a.carousel-control-next {
     right: 615px;
@@ -870,135 +594,22 @@ h2, h3 {
     font-size: 30px;
     color: #ffffff;
 }
-
-    #main_slider .carousel-control-next:focus,
+#main_slider .carousel-control-next:focus,
     #main_slider .carousel-control-next:hover,
     #main_slider .carousel-control-prev:focus,
     #main_slider .carousel-control-prev:hover {
         color: #fff;
         background-color: #f26522;
     }
+    
 
 
-/* fashion section end */
+/* section end */
 
 
-/* electronic section start */
-
-.electronic_img {
-    width: 100%;
-    text-align: center;
-    margin: 50px 0px;
-    min-height: 293px;
-}
-
-#electronic_main_slider a.carousel-control-next {
-    right: 615px;
-    top: 105%;
-}
-
-#electronic_main_slider a.carousel-control-prev {
-    left: 615px;
-    top: 105%;
-}
-
-#electronic_main_slider .carousel-control-next,
-#electronic_main_slider .carousel-control-prev {
-    width: 55px;
-    height: 55px;
-    background-color: #30302e;
-    opacity: 1;
-    font-size: 30px;
-    color: #ffffff;
-}
-
-    #electronic_main_slider .carousel-control-next:focus,
-    #electronic_main_slider .carousel-control-next:hover,
-    #electronic_main_slider .carousel-control-prev:focus,
-    #electronic_main_slider .carousel-control-prev:hover {
-        color: #fff;
-        background-color: #f26522;
-    }
 
 
-/* electronic section end */
 
-
-/* jewellery section start */
-
-.jewellery_section {
-    width: 100%;
-    float: left;
-    padding-bottom: 50px;
-}
-
-.jewellery_img {
-    width: 100%;
-    text-align: center;
-    margin: 50px 0px;
-    min-height: 293px;
-}
-
-#jewellery_main_slider a.carousel-control-next {
-    right: 615px;
-    top: 75%;
-}
-
-#jewellery_main_slider a.carousel-control-prev {
-    left: 615px;
-    top: 75%;
-}
-
-#jewellery_main_slider .carousel-control-next,
-#jewellery_main_slider .carousel-control-prev {
-    width: 55px;
-    height: 55px;
-    background-color: #30302e;
-    opacity: 1;
-    font-size: 30px;
-    color: #ffffff;
-}
-
-    #jewellery_main_slider .carousel-control-next:focus,
-    #jewellery_main_slider .carousel-control-next:hover,
-    #jewellery_main_slider .carousel-control-prev:focus,
-    #jewellery_main_slider .carousel-control-prev:hover {
-        color: #fff;
-        background-color: #f26522;
-    }
-
-
-/* loader bar css start */
-
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
-/* loader bar css end */
-
-
-/* jewellery section end */
-
-
-/* footer section start */
 
 
 /* footer section start */
@@ -1015,76 +626,34 @@ h2, h3 {
     text-align: center;
 }
 
-.input_bt {
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    border-bottom: 1px solid #ffffff !important;
-}
 
-.mail_bt {
-    width: 100%;
-    float: left;
-    font-size: 18px;
-    color: #fff;
-    background-color: transparent;
-    padding: 5px 0px 5px 0px;
-    height: 60px;
-    border: 0px;
-}
-
-input.mail_bt::placeholder {
-    color: #fff;
-}
-
-.subscribe_bt {
-    width: 30%;
-    float: right;
-    font-size: 16px;
-    color: #f26522;
-    background-color: transparent;
-    padding: 20px 0px 5px 0px;
-    border-radius: 30px;
-    border: 0px;
-    text-transform: uppercase;
-    text-align: right;
-}
-
-    .subscribe_bt a {
-        color: #f26522;
-    }
-
-        .subscribe_bt a:hover {
-            color: #ffffff;
-        }
 
 .footer_menu {
     width: 100%;
     margin: 0 auto;
     text-align: center;
 }
-
-    .footer_menu ul {
+.footer_menu ul {
         margin: 0px;
         padding: 0px;
         display: inline-block;
     }
-
-    .footer_menu li {
+.footer_menu li {
         float: left;
         font-size: 16px;
         color: #f1f1f1;
         padding: 20px 10px 0px 10px;
     }
-
-        .footer_menu li a {
+.footer_menu li a {
             color: #f1f1f1;
         }
-
-            .footer_menu li a:hover {
+.footer_menu li a:hover {
                 color: #f26522;
-            }
+            } 
+            
+        
+
+    
 
 .location_main {
     width: 100%;
@@ -1099,14 +668,14 @@ input.mail_bt::placeholder {
     color: #ffffff;
     padding: 30px 30px 30px 30px;
 }
-
-    .location_main a {
+.location_main a {
         color: #ffffff;
     }
-
-        .location_main a:hover {
+.location_main a:hover {
             color: #f26522;
         }
+        
+    
 
 
 /* footer section end */
@@ -1129,15 +698,12 @@ input.mail_bt::placeholder {
     font-size: 16px;
     margin: 20px 0px;
 }
-
-    .copyright_text a {
+.copyright_text a {
         color: #ffffff;
     }
-
-        .copyright_text a:hover {
+.copyright_text a:hover {
             color: #f26522;
-        }
-
+        }         
 .margin_top90 {
     margin-top: 90px;
 }

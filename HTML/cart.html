@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>lm-shop</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+</head>
+<body>
+    <div class="banner_bg_main">
+        <div class="container">
+            <div class="header_section_top">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="custom_menu">
+                            <ul>
+                                <li><a href="#">coś</a></li>
+                                <li><a href="#">coś</a></li>
+                                <li><a href="#">coś</a></li>
+                                <li><a href="#">coś</a></li>
+                                <li><a href="#">Obsługa klienta</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="shopping-cart">
+            <!-- Title -->
+            <div class="title">
+                Twój koszyk
+            </div>
+
+            
+        </div>
+
+       
+
+    </div>
+
+    <div class="footer_section layout_padding">
+        <div class="container">
+            <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+            <div class="input_bt">
+            </div>
+
+            <div class="location_main">If you need help, contact us : <a href="#">help@mail.com</a></div>
+        </div>
+    </div>
+    <div class="copyright_section">
+        <div class="container">
+            <p class="copyright_text">© 2024 All Rights Reserved. Design by </a></p>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <script src="js/oferta.js"></script>
+    <script src="https://shoppy.gg/api/embed.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        window.onload = function () {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            const cartContainer = document.querySelector('.shopping-cart');
+
+            cart.forEach(product => {
+                // Stwórz nowy element `item`
+                const item = document.createElement('div');
+                item.classList.add('item');
+
+                // Stwórz opis produktu
+                const description = document.createElement('div');
+                description.classList.add('description');
+
+                const productLink = document.createElement('a');
+                productLink.href = "#"; // Możesz podać link do szczegółów produktu
+                productLink.textContent = product.name;
+
+                description.appendChild(productLink);
+
+                // Stwórz element ceny
+                const totalPrice = document.createElement('div');
+                totalPrice.classList.add('total-price');
+                totalPrice.textContent = `${product.price} zł`;
+
+                // Dodaj `description` i `totalPrice` do `item`
+                item.appendChild(description);
+                item.appendChild(totalPrice);
+
+                // Dodaj nowy `item` do koszyka
+                cartContainer.appendChild(item);
+            });
+        };
+    </script>
+</body>
+</html>

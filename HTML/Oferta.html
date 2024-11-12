@@ -58,13 +58,10 @@
                             <h3>Details</h3>
                             <p>7 MEDALS丨2019 | 2020 | 2021 | 2023 | LOYALITY | Global Offensive Badge | 5 years of service.</p>
                             <p><strong>bla bla bla</strong></p>
-                            <p>---blabla bal</p>
-                            <div class="details">
-                                <p>Jest to konto CS2 prime z 25+ godzinami. Jest możliwość gry na FaceIT (wymagana rejestracja)..</p>
-                                <p><strong>Coś tam coś L0m1s wymyśli</strong></p>
-                                <p>- bla bla bla bla</p>
-                            </div>
-                            <button class="view-more" onclick="toggleDetails()">Pokaż więcej</button>
+                            <p>blabla bal</p>
+                            <p>Jest to konto CS2 prime z 25+ godzinami. Jest możliwość gry na FaceIT (wymagana rejestracja)..</p>
+                            <p><strong>Coś tam coś L0m1s wymyśli</strong></p>
+                            <p>bla bla bla bla</p>
                         </div>
                     </div>
 
@@ -72,27 +69,16 @@
                         <div class="purchase-info">
                             <p class="total-amount">Cena: <strong>100 zł</strong></p>
                             <button class="buy-now" data-shoppy-product="b30MH0o">Zamów teraz</button>
-                            <button class="cart" onclick="addToCart('Potrzebne informacje', 100)">Dodaj do koszyka</button>
+                            <button class="cart">Dodaj do koszyka</button>
                             <p class="payment"><strong>Metody płatności</strong></p>
                             <p class="paypal"><img src="images/paypal.png"></p>
                         </div>
                     </div>
-
-                    <!-- Modal -->
-                    <div id="orderModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeOrderPopup()">&times;</span>
-                            <h2>Potwierdzenie zamówienia</h2>
-                            <p>Czy na pewno chcesz zamówić?</p>
-                            <button class="confirm-order">Potwierdź zamówienie</button>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
-        
-    </div>   
+
+    </div>
 
     <div class="footer_section layout_padding">
         <div class="container">
@@ -119,37 +105,6 @@
     <script src="js/plugin.js"></script>
     <script src="js/oferta.js"></script>
     <script src="https://shoppy.gg/api/embed.js"></script>
-    <script>
-        function toggleDetails() {
-            const details = document.querySelector('.details');
-            const button = document.querySelector('.view-more');
-
-            details.classList.toggle('show'); // Dodaje lub usuwa klasę .show
-
-            if (details.classList.contains('show')) {
-                button.textContent = 'Pokaż mniej';
-            } else {
-                button.textContent = 'Pokaż więcej';
-            }
-        }
-    </script>
-    <script>
-        function addToCart(productName, price) {
-            const product = { name: productName, price: price };
-
-            // Pobierz bieżącą zawartość koszyka z localStorage
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-            // Dodaj nowy produkt do koszyka
-            cart.push(product);
-
-            // Zapisz zaktualizowany koszyk do localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
-
-            // Przejdź do strony cart.html
-            window.location.href = 'cart.html';
-        }
-    </script>
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>

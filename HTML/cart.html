@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>lm-shop</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+</head>
+<body>
+
+    <div class="cont2">
+        <div id="mySidenav" class="sidenav">
+            <div class="box2 cs2ac">
+                <a href="index.html">
+                    <div class="butterk">
+                        <img src="images/butterfly-knife.png" alt="Butterfly Knife">
+                    </div>
+                    CS 2 accounts
+                </a>
+            </div>
+
+            <div class="box2 steamP">
+                <a href="index.html">
+                    <div class="coin">
+                        <img src="images/steam.png" alt="Steam Point">
+                    </div>
+                    Steam Point
+                </a>
+            </div>
+
+            <div class="box2 boost">
+                <a href="#">
+                    <div class="psc">
+                        <img src="images/boosting.png" alt="psc">
+                    </div>
+                    Exchange your Paysafecard
+                </a>
+            </div>
+
+            <div class="box2 giftc">
+                <a href="#">
+                    <div class="giftcards">
+                        <img src="images/gift-card.png" alt="Gift Cards">
+                    </div>
+                    Gift Cards
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="banner_bg_main">
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark">
+
+            <div class="container">
+                <!-- LOGO -->
+                <a class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></a>
+
+                <a class="navbar-brand logo" href="main.html">
+                    <img class="navbar-brand-icon" alt="LM-SHOP Icon" src="images/footer-logo.png">
+                    <span class="logo-text">LM-SHOP</span>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto navbar-center" id="mySidenav">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#faq" class="nav-link">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#discord" class="nav-link">Discord</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cart.html" class="nav-link">Cart</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="/login/" class="nav-link">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <div class="title">
+        Twój koszyk
+    </div>
+    <div class="shopping-cart">
+        <div id="cart-items">
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="copyright_section">
+            <div class="footer_logo">
+                <a href="Main.html"><img src="images/footer-logo.png" alt="Footer Logo"></a>
+            </div>
+            <div class="text_section">
+                <div class="location_main">
+                    If you need help, contact us : <a href="#">help@mail.com</a>
+                </div>
+                <div class="copyright_text">
+                    © 2024 All Rights Reserved. Design by
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <script src="js/oferty.json"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/leftpanel.js"></script>
+    <script src="js/przewijanie.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Strona załadowana.');
+
+            // Załaduj skrypt Shoppy Embed na początku
+            const script = document.createElement('script');
+            script.src = 'https://shoppy.gg/api/embed.js';
+            script.onload = () => {
+                console.log('Skrypt Shoppy Embed załadowany.');
+                window.shoppyEmbedScriptLoaded = true;
+            };
+            script.onerror = () => {
+                console.error('Nie udało się załadować skryptu Shoppy Embed.');
+            };
+            document.body.appendChild(script);
+
+            const cartContainer = document.getElementById('cart-items');
+            if (!cartContainer) {
+                console.error('Nie znaleziono elementu #cart-items.');
+                return;
+            }
+
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p>Twój koszyk jest pusty.</p>';
+                return;
+            }
+
+            cartContainer.innerHTML = '';
+
+            cart.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('cart-item');
+                console.log('Tworzenie elementu koszyka:', item);
+
+                const zamowButton = item.shoppyProductCode
+                    ? `<button class="button buy-now" data-shoppy-product="${item.shoppyProductCode}">
+                                            Zamów teraz
+                                        </button>`
+                    : '';
+
+                itemDiv.innerHTML = `
+                                        <div class="cart-item-details">
+                                                <p>${item.szczegoly}</p>
+                                                <p><strong>Cena:</strong> ${item.cena}</p>
+                                        </div>
+                                        <div class="cart-item-buttons">
+                                                ${zamowButton}
+                                                <img class="remove-btn" data-id="${item.id}" src="images/bin.png" alt="Usuń" style="cursor: pointer; width: 24px; height: 24px; margin: 10px auto 0;">
+                                        </div>
+                                        `;
+                cartContainer.appendChild(itemDiv);
+            });
+
+            cartContainer.addEventListener('click', (event) => {
+                if (event.target.classList.contains('remove-btn')) {
+                    const idToDelete = parseInt(event.target.dataset.id, 10);
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    cart = cart.filter(item => item.id !== idToDelete);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    event.target.closest('.cart-item').remove();
+
+                    if (cart.length === 0) {
+                        cartContainer.innerHTML = '<p>Twój koszyk jest pusty.</p>';
+                    }
+                }
+
+                if (event.target.classList.contains('buy-now')) {
+                    const productCode = event.target.dataset.shoppyProduct;
+                    console.log(`Kod produktu: ${productCode}`);
+
+                    if (productCode && productCode.trim() !== "") {
+                        const existingEmbed = document.getElementById('shoppy-embed');
+                        if (existingEmbed) {
+                            existingEmbed.remove();
+                        }
+
+                        const embedContainer = document.createElement('div');
+                        embedContainer.id = 'shoppy-embed';
+                        embedContainer.setAttribute('data-product', productCode);
+                        document.body.appendChild(embedContainer);
+
+                        console.log('Embed Shoppy załadowany dla kodu:', productCode);
+                    } else {
+                        alert('Nie znaleziono kodu produktu!');
+                    }
+                }
+            });
+        });
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-﻿* {
+* {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
 }
@@ -903,6 +903,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100vw;
+    margin-top: auto;
 }
 
 .footer_logo img {

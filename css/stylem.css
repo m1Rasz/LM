@@ -9,6 +9,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    Height: 100%;
 }
 
 body {
@@ -17,6 +18,9 @@ body {
     font-family: 'Poppins', sans-serif;
     width: 100%;
     min-width: auto;
+    Display: flex;
+    Flex-direction: column;
+    min-height: 100%;
 }
 
 
@@ -189,7 +193,7 @@ button {
     float: left;
     background-image: url(../images/banner-bg.png);
 
-    background-size: cover; /* Dopasowanie obrazu t³a, aby wype³nia³ kontener */
+    background-size: cover; /* Dopasowanie obrazu tÅ‚a, aby wypeÅ‚niaÅ‚ kontener */
     background-repeat: no-repeat;
 
 }
@@ -216,11 +220,11 @@ button {
     background-color: #0f0f0f;
     transition: background-color 0.9s, box-shadow 0.9s, color 0.9s;
     padding: 8px 20px;
-    height: 85px; /* Sta³a wysokoœæ */
+    height: 85px; /* StaÅ‚a wysokoÅ›Ä‡ */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff; /* Tekst bia³y na przezroczystym tle */
+    color: #fff; /* Tekst biaÅ‚y na przezroczystym tle */
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -239,34 +243,34 @@ button {
         }
 
 .navbar-brand {
-    display: flex; /* Aby obrazek i tekst by³y obok siebie */
-    align-items: center; /* Wyœrodkowanie w pionie */
-    text-decoration: none; /* Usuñ podkreœlenie */
+    display: flex; /* Aby obrazek i tekst byÅ‚y obok siebie */
+    align-items: center; /* WyÅ›rodkowanie w pionie */
+    text-decoration: none; /* UsuÅ„ podkreÅ›lenie */
 }
 
     .navbar-brand .navbar-brand-icon {
         height: 70px; /* Rozmiar ikonki */
-        margin-right: 10px; /* Odstêp miêdzy ikon¹ a tekstem */
+        margin-right: 10px; /* OdstÄ™p miÄ™dzy ikonÄ… a tekstem */
         transition: transform 0.3s ease-in-out; /* Animacja przy najechaniu */
         margin-left: -90px;
     }
 
     .navbar-brand .logo-text {
-        font-size: 2rem; /* Powiêkszenie tekstu */
+        font-size: 2rem; /* PowiÄ™kszenie tekstu */
         right: 90px;
         font-weight: bold; /* Pogrubienie tekstu */
         color: #fff; /* Kolor tekstu */
         text-transform: uppercase; /* Wielkie litery */
-        transition: color 0.3s ease-in-out; /* P³ynna zmiana koloru */
+        transition: color 0.3s ease-in-out; /* PÅ‚ynna zmiana koloru */
     }
 
-    /* Efekt podœwietlenia przy najechaniu */
+    /* Efekt podÅ›wietlenia przy najechaniu */
     .navbar-brand:hover .logo-text {
         color: #ff9000; /* Nowy kolor tekstu przy najechaniu */
     }
 
     .navbar-brand:hover .navbar-brand-icon {
-        transform: scale(1.1); /* Powiêkszenie ikony przy najechaniu */
+        transform: scale(1.1); /* PowiÄ™kszenie ikony przy najechaniu */
     }
 /*nav*/
 /* header  */
@@ -349,24 +353,24 @@ button {
 .containt_main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Wyœrodkowanie wszystkich elementów w poziomie */
-    align-items: center; /* Wyœrodkowanie elementów w pionie */
-    gap: 50px; /* Odstêpy miêdzy elementami */
+    justify-content: center; /* WyÅ›rodkowanie wszystkich elementÃ³w w poziomie */
+    align-items: center; /* WyÅ›rodkowanie elementÃ³w w pionie */
+    gap: 50px; /* OdstÄ™py miÄ™dzy elementami */
 }
 
 .top-bar {
-    width: 100%; /* Pe³na szerokoœæ strony */
-    height: 40px; /* Wysokoœæ paska */
-    background-color: white; /* Kolor t³a: bia³y */
+    width: 100%; /* PeÅ‚na szerokoÅ›Ä‡ strony */
+    height: 40px; /* WysokoÅ›Ä‡ paska */
+    background-color: white; /* Kolor tÅ‚a: biaÅ‚y */
     color: #333; /* Kolor tekstu */
-    display: flex; /* U¿ycie flexboxa */
-    justify-content: center; /* Wyœrodkowanie poziome */
-    align-items: center; /* Wyœrodkowanie pionowe */
-    position: fixed; /* Pasek zawsze na górze */
-    top: 0; /* Przyklejony do góry */
+    display: flex; /* UÅ¼ycie flexboxa */
+    justify-content: center; /* WyÅ›rodkowanie poziome */
+    align-items: center; /* WyÅ›rodkowanie pionowe */
+    position: fixed; /* Pasek zawsze na gÃ³rze */
+    top: 0; /* Przyklejony do gÃ³ry */
     left: 0;
-    z-index: 1000; /* Na wierzchu innych elementów */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Delikatny cieñ */
+    z-index: 1000; /* Na wierzchu innych elementÃ³w */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Delikatny cieÅ„ */
     font-size: 14px; /* Rozmiar czcionki */
 }
 
@@ -387,25 +391,25 @@ button {
 
 .about .row {
     display: flex;
-    align-items: center; /* Wyrównuje logo i tekst w jednej linii */
+    align-items: center; /* WyrÃ³wnuje logo i tekst w jednej linii */
 }
 
 .about_img {
-    text-align: right; /* Obrazek wyrównany do prawej */
-    margin-right: 0; /* Usuñ nadmiarowy margines */
-    margin-left: 30px; /* Dodatkowy odstêp od tekstu */
+    text-align: right; /* Obrazek wyrÃ³wnany do prawej */
+    margin-right: 0; /* UsuÅ„ nadmiarowy margines */
+    margin-left: 30px; /* Dodatkowy odstÄ™p od tekstu */
 }
 
     .about_img img {
         max-width: 100%;
         height: auto;
-        width: 200px; /* Szerokoœæ obrazka */
+        width: 200px; /* SzerokoÅ›Ä‡ obrazka */
     }
 
 .about_text {
-    text-align: left; /* Wyrównanie tekstu do lewej */
-    max-width: 900px; /* Maksymalna szerokoœæ, po której tekst siê zawija */
-    word-wrap: break-word; /* Z³amie d³ugie s³owa, jeœli przekrocz¹ szerokoœæ */
+    text-align: left; /* WyrÃ³wnanie tekstu do lewej */
+    max-width: 900px; /* Maksymalna szerokoÅ›Ä‡, po ktÃ³rej tekst siÄ™ zawija */
+    word-wrap: break-word; /* ZÅ‚amie dÅ‚ugie sÅ‚owa, jeÅ›li przekroczÄ… szerokoÅ›Ä‡ */
 }
 
     .about_text h2 {
@@ -417,42 +421,42 @@ button {
     .about_text p {
         font-size: 16px;
         line-height: 1.5;
-        word-break: break-word; /* Zawijanie wyrazów */
+        word-break: break-word; /* Zawijanie wyrazÃ³w */
     }
 
 /*about end*/
 /* Main site */
 
 .title-offer {
-    text-align: center; /* Wyœrodkowanie tekstu */
-    font-size: 48px; /* Du¿y rozmiar czcionki */
+    text-align: center; /* WyÅ›rodkowanie tekstu */
+    font-size: 48px; /* DuÅ¼y rozmiar czcionki */
     font-weight: bold; /* Pogrubienie */
-    color: #000000; /* Przyci¹gaj¹cy kolor */
+    color: #000000; /* PrzyciÄ…gajÄ…cy kolor */
     text-transform: uppercase; /* Wszystkie litery wielkie */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Cieñ tekstu */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* CieÅ„ tekstu */
 
-    letter-spacing: 2px; /* Dystans miêdzy literami */
-    line-height: 1.2; /* Optymalny odstêp miêdzy liniami */
+    letter-spacing: 2px; /* Dystans miÄ™dzy literami */
+    line-height: 1.2; /* Optymalny odstÄ™p miÄ™dzy liniami */
 }
 .row {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 110px; /* Odstêpy miêdzy boxami */
+    gap: 110px; /* OdstÄ™py miÄ™dzy boxami */
 }
 
 .wallet_box img {
-    max-width: 100%; /* Dopasowanie do szerokoœci kontenera */
+    max-width: 100%; /* Dopasowanie do szerokoÅ›ci kontenera */
     height: auto; /* Zachowanie proporcji */
-    width: 50px; /* Ustal konkretne wymiary, np. 50px szerokoœci */
+    width: 50px; /* Ustal konkretne wymiary, np. 50px szerokoÅ›ci */
 }
 .wallet_box {
     background: #fff;
     transition: ease-in all 0.5s;
 
-    width: 300px; /* Ustaw szerokoœæ boksów */
+    width: 300px; /* Ustaw szerokoÅ›Ä‡ boksÃ³w */
 
-    display: inline-block; /* Umo¿liwia wyœwietlanie obok siebie */
+    display: inline-block; /* UmoÅ¼liwia wyÅ›wietlanie obok siebie */
 
 }
 
@@ -574,31 +578,31 @@ button {
 /*Discord*/
 
 .Jdiscord {
-    background-image: url(../images/JD.png); /* Œcie¿ka do t³a PNG */
-    background-size: cover; /* Dopasowanie obrazu t³a do kontenera */
-    background-position: center 10px; /* Wyœrodkowanie poziome i przesuniêcie pionowe w dó³ o 100px */
-    background-attachment: fixed; /* Ustawia t³o jako nieruchome podczas przewijania */
-    padding: 50px 0; /* Dodanie paddingu, by daæ trochê przestrzeni wewn¹trz */
-    text-align: center; /* Wyœrodkowanie tekstu w œrodku */
+    background-image: url(../images/JD.png); /* ÅšcieÅ¼ka do tÅ‚a PNG */
+    background-size: cover; /* Dopasowanie obrazu tÅ‚a do kontenera */
+    background-position: center 10px; /* WyÅ›rodkowanie poziome i przesuniÄ™cie pionowe w dÃ³Å‚ o 100px */
+    background-attachment: fixed; /* Ustawia tÅ‚o jako nieruchome podczas przewijania */
+    padding: 50px 0; /* Dodanie paddingu, by daÄ‡ trochÄ™ przestrzeni wewnÄ…trz */
+    text-align: center; /* WyÅ›rodkowanie tekstu w Å›rodku */
 }
 
 
 .titleJ h1, .titleJ h3 {
     margin: 0;
     color: #ffffff; /* Kolor tekstu */
-    text-shadow: 0 0 10px #000000, /* Wewnêtrzny glow */
-    0 0 20px #000000, /* Zewnêtrzny glow */
+    text-shadow: 0 0 10px #000000, /* WewnÄ™trzny glow */
+    0 0 20px #000000, /* ZewnÄ™trzny glow */
     0 0 30px #000000; /* Mocniejszy efekt glow */
 }
 
 .discord-b {
-    display: inline-block; /* Umo¿liwia klikanie tylko na obrazek */
+    display: inline-block; /* UmoÅ¼liwia klikanie tylko na obrazek */
 }
 
 
 
 .discord-b img {
-    width: 30%; /* Opcjonalnie - jeœli chcesz, by obrazek dostosowa³ siê do kontenera */
+    width: 30%; /* Opcjonalnie - jeÅ›li chcesz, by obrazek dostosowaÅ‚ siÄ™ do kontenera */
     height: auto; /* Zachowuje proporcje */
 }
 /*Discord end*/
@@ -659,27 +663,27 @@ button {
 
 
 .sidenav {
-    height: 100%; /* Menu na pe³n¹ wysokoœæ */
+    height: 100%; /* Menu na peÅ‚nÄ… wysokoÅ›Ä‡ */
     width: 30%;
     font-family: 'Ginto Nord', Arial, sans-serif;
-    width: 0; /* Pocz¹tkowa szerokoœæ 0 */
+    width: 0; /* PoczÄ…tkowa szerokoÅ›Ä‡ 0 */
     position: fixed;
     z-index: 1;
-    top: 0; /* Menu zaczyna siê od góry */
-    left: 0; /* Rozci¹ga siê od lewej strony */
+    top: 0; /* Menu zaczyna siÄ™ od gÃ³ry */
+    left: 0; /* RozciÄ…ga siÄ™ od lewej strony */
     background-color: #f6f6f6;
     overflow-x: hidden;
-    transition: width 0.5s ease; /* P³ynne otwieranie */
-    padding-top: 60px; /* Odstêp od góry */
-    border-right: 2px solid #222; /* Prawa krawêdŸ */
+    transition: width 0.5s ease; /* PÅ‚ynne otwieranie */
+    padding-top: 60px; /* OdstÄ™p od gÃ³ry */
+    border-right: 2px solid #222; /* Prawa krawÄ™dÅº */
 }
 
     .sidenav.open, .menu-bar.open {
-        width: 250px; /* Szerokoœæ paska i menu po wysuniêciu */
+        width: 250px; /* SzerokoÅ›Ä‡ paska i menu po wysuniÄ™ciu */
     }
     /* Klasa aktywna dla otwarcia menu */
     .sidenav.active {
-        width: 300px; /* Szerokoœæ menu po otwarciu */
+        width: 300px; /* SzerokoÅ›Ä‡ menu po otwarciu */
     }
     .navbar-nav .nav-item {
     margin: 0 5px;
@@ -698,7 +702,7 @@ button {
         cursor: pointer;
     }
 
-/* Style dla boxów */
+/* Style dla boxÃ³w */
 .box2 {
     width: 100%;
     display: flex;
@@ -716,16 +720,16 @@ button {
         height: 75px;
     }
 
-    /* Hover efekt dla boxów */
+    /* Hover efekt dla boxÃ³w */
     .box2:hover {
         background-color: #f0f0f0;
         cursor: pointer;
     }
 
-/* Media Queries dla mniejszych ekranów */
+/* Media Queries dla mniejszych ekranÃ³w */
 @media screen and (max-width: 768px) {
     .menu-bar {
-        width: 50px; /* Wê¿szy pasek na mniejszych ekranach */
+        width: 50px; /* WÄ™Å¼szy pasek na mniejszych ekranach */
     }
 
     .sidenav.open {
@@ -779,7 +783,7 @@ button {
 .menu {
     list-style: none;
     display: flex;
-    align-items: center; /* Wyrównanie elementów w pionie */
+    align-items: center; /* WyrÃ³wnanie elementÃ³w w pionie */
     padding: 0;
     margin: 0;
 }
@@ -827,13 +831,13 @@ button {
 
     .header_box {
         display: flex;
-        justify-content: center; /* Wyœrodkowanie elementów w boxie */
-        align-items: center; /* Wyœrodkowanie elementów w pionie */
+        justify-content: center; /* WyÅ›rodkowanie elementÃ³w w boxie */
+        align-items: center; /* WyÅ›rodkowanie elementÃ³w w pionie */
         margin-top: 20px;
     }
 
     .login_menu {
-        align-items: center; /* Wyrównanie w pionie */
+        align-items: center; /* WyrÃ³wnanie w pionie */
 
         position: relative;
         top: 10px;
@@ -881,7 +885,7 @@ button {
     }
 
     .toggle_icon.active img {
-        transform: rotate(180deg); /* Obrót o 90 stopni po klikniêciu */
+        transform: rotate(180deg); /* ObrÃ³t o 90 stopni po klikniÄ™ciu */
     }
 .toggle_icon {
     padding: 5px;
@@ -1004,8 +1008,8 @@ button {
         text-align: center;
         text-transform: uppercase;
         font-weight: bold;
-        margin: 0; /* Usuñ marginesy */
-        line-height: 1.2; /* Wyrównanie tekstu */
+        margin: 0; /* UsuÅ„ marginesy */
+        line-height: 1.2; /* WyrÃ³wnanie tekstu */
     }
 
 
@@ -1322,9 +1326,9 @@ button {
 
     .carousel-inner {
         display: flex;
-        align-items: center; /* Wyrównanie w pionie */
-        justify-content: center; /* Wyrównanie w poziomie */
-        height: 200px; /* Ustaw sta³¹ wysokoœæ */
+        align-items: center; /* WyrÃ³wnanie w pionie */
+        justify-content: center; /* WyrÃ³wnanie w poziomie */
+        height: 200px; /* Ustaw staÅ‚Ä… wysokoÅ›Ä‡ */
         text-align: center;
     }
 
@@ -1400,13 +1404,13 @@ button {
 
     @media (max-width: 576px) {
         .box_main {
-            flex: 1 1 100%; /* Jeden box w wierszu na bardzo ma³ych ekranach */
+            flex: 1 1 100%; /* Jeden box w wierszu na bardzo maÅ‚ych ekranach */
         }
     }
 
     .main-container {
         margin-top: 40px;
-        max-width: 1500px; /* Wystarczaj¹co szeroki kontener, aby zmieœciæ cztery boxy */
+        max-width: 1500px; /* WystarczajÄ…co szeroki kontener, aby zmieÅ›ciÄ‡ cztery boxy */
         margin: 0 auto; /* Wycentrowanie kontenera */
     }
 
@@ -1425,7 +1429,7 @@ button {
     }
 
         .box_main:hover {
-            transform: scale(1.05); /* Powiêkszenie o 5% */
+            transform: scale(1.05); /* PowiÄ™kszenie o 5% */
             box-shadow: 0px 0 30px 10px #d1c0a4;
         }
 
@@ -1536,9 +1540,11 @@ button {
 }
 
 footer {
+    flex-shrink: 0;
     position: static;
     bottom: 0;
     width: 100vw;
+    margin-top: auto;
 }
 .footer_menu {
     width: 100%;

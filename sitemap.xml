@@ -1,44 +1,42 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-	<loc>https://lmstore.me/</loc>
-	<lastmod>2025-02-22T22:34:32+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://lmstore.me/index.html</loc>
+<lastmod>2025-02-27T11:10:12+01:00</lastmod>
+<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://lmstore.me/cs2.html</loc>
-	<lastmod>2025-02-22T22:34:32+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://lmstore.me/cs2.html</loc>
+<lastmod>2025-02-27T11:10:12+01:00</lastmod>
+<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://lmstore.me/Steam_Points.html</loc>
-	<lastmod>2025-02-22T22:34:32+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://lmstore.me/Steam_Points.html</loc>
+<lastmod>2025-02-27T11:10:12+01:00</lastmod>
+<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://lmstore.me/PSC.html</loc>
-	<lastmod>2025-02-22T22:34:32+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://lmstore.me/PSC.html</loc>
+<lastmod>2025-02-27T11:10:12+01:00</lastmod>
+<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://lmstore.me/Stgroup.html</loc>
-	<lastmod>2025-02-22T22:34:32+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://lmstore.me/Stcom.html</loc>
+<lastmod>2025-02-27T11:10:12+01:00</lastmod>
+<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://lmstore.me/index.html</loc>
-	<lastmod>2025-02-22T22:34:32+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://lmstore.me/Stgroup.html</loc>
+<lastmod>2025-02-27T11:10:12+01:00</lastmod>
+<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://lmstore.me/cart.html</loc>
-	<lastmod>2025-02-22T22:34:32+01:00</lastmod>
-	<priority>0.8</priority>
+<loc>https://lmstore.me/cart.html</loc>
+<lastmod>2025-02-27T11:10:12+01:00</lastmod>
+<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://lmstore.me/TOS.html</loc>
-	<lastmod>2025-02-22T22:34:32+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://lmstore.me/TOS.html</loc>
+<lastmod>2025-02-27T11:10:12+01:00</lastmod>
+<priority>1.0</priority>
 </url>
 </urlset>

@@ -1,0 +1,17 @@
+[
+  {
+    "nazwa": "YouTube Premuim",
+    "cena": "",
+    "link": "OfertaSubs.html?typ=ytpremium"
+  },
+  {
+    "nazwa": "Spotify Premium",
+    "cena": "",
+    "link": "OfertaSubs.html?typ=spotify"
+  },
+  {
+    "nazwa": "Netflix",
+    "cena": "",
+    "link": "OfertaSubs.html?typ=netflix"
+  }
+]

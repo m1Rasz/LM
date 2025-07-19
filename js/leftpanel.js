@@ -1,23 +1,25 @@
 function openNav() {
-    var sidenav = document.getElementById("mySidenav");
-    var toggleIcon = document.querySelector(".toggle_icon");
+            const sidenav = document.getElementById("mySidenav");
+            const toggleIcon = document.querySelector(".menu-toggle");
 
-    // Prze³¹czanie klasy 'open'
-    sidenav.classList.toggle("open");
-    toggleIcon.classList.toggle("active");
-}
+            sidenav.classList.toggle("open");
+            toggleIcon.classList.toggle("active");
 
-// Zamkniêcie po klikniêciu poza menu
-document.addEventListener("click", function (event) {
-    var sidenav = document.getElementById("mySidenav");
-    var toggleIcon = document.querySelector(".toggle_icon");
+            toggleIcon.innerHTML = sidenav.classList.contains("open") ? "&#x25C0;" : "&#x25B6;";
+        }
 
-    if (
-        sidenav.classList.contains("open") &&
-        !sidenav.contains(event.target) &&
-        !toggleIcon.contains(event.target)
-    ) {
-        sidenav.classList.remove("open");
-        toggleIcon.classList.remove("active");
-    }
-});
+        // Zamykanie menu po klikniÄ™ciu poza nim
+        document.addEventListener("click", function (event) {
+            const sidenav = document.getElementById("mySidenav");
+            const toggleIcon = document.querySelector(".menu-toggle");
+
+            if (
+                sidenav.classList.contains("open") &&
+                !sidenav.contains(event.target) &&
+                !toggleIcon.contains(event.target)
+            ) {
+                sidenav.classList.remove("open");
+                toggleIcon.classList.remove("active");
+                toggleIcon.innerHTML = "&#x25B6;";
+            }
+        });

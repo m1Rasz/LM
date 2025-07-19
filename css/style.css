@@ -3,8 +3,8 @@
 * {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
-    margin: 0; /* Resetowanie domyœlnych marginesów */
-    padding: 0; /* Resetowanie domyœlnych paddingów */
+    margin: 0; /* Resetowanie domyÅ“lnych marginesÃ³w */
+    padding: 0; /* Resetowanie domyÅ“lnych paddingÃ³w */
     box-sizing: border-box;
 }
 
@@ -20,7 +20,7 @@ body {
     font-weight: normal;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-    width: 100%; /* Zapewnia pe³n¹ szerokoœæ strony */
+    width: 100%; /* Zapewnia peÂ³nÂ¹ szerokoÅ“Ã¦ strony */
     height: 100%;
 }
 
@@ -232,7 +232,7 @@ button {
     width: 7%;
     height: 7%;
     margin-left: 20px;
-    transition: transform 1s ease; /* Krótki czas dla natychmiastowego efektu */
+    transition: transform 1s ease; /* KrÃ³tki czas dla natychmiastowego efektu */
 }
 
     .discord-logo:hover {
@@ -298,24 +298,24 @@ button {
 .containt_main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Wyœrodkowanie wszystkich elementów w poziomie */
-    align-items: center; /* Wyœrodkowanie elementów w pionie */
-    gap: 50px; /* Odstêpy miêdzy elementami */
+    justify-content: center; /* WyÅ“rodkowanie wszystkich elementÃ³w w poziomie */
+    align-items: center; /* WyÅ“rodkowanie elementÃ³w w pionie */
+    gap: 50px; /* OdstÃªpy miÃªdzy elementami */
 }
 
 .top-bar {
-    width: 100%; /* Pe³na szerokoœæ strony */
-    height: 40px; /* Wysokoœæ paska */
-    background-color: white; /* Kolor t³a: bia³y */
+    width: 100%; /* PeÂ³na szerokoÅ“Ã¦ strony */
+    height: 40px; /* WysokoÅ“Ã¦ paska */
+    background-color: white; /* Kolor tÂ³a: biaÂ³y */
     color: #333; /* Kolor tekstu */
-    display: flex; /* U¿ycie flexboxa */
-    justify-content: center; /* Wyœrodkowanie poziome */
-    align-items: center; /* Wyœrodkowanie pionowe */
-    position: fixed; /* Pasek zawsze na górze */
-    top: 0; /* Przyklejony do góry */
+    display: flex; /* UÂ¿ycie flexboxa */
+    justify-content: center; /* WyÅ“rodkowanie poziome */
+    align-items: center; /* WyÅ“rodkowanie pionowe */
+    position: fixed; /* Pasek zawsze na gÃ³rze */
+    top: 0; /* Przyklejony do gÃ³ry */
     left: 0;
-    z-index: 1000; /* Na wierzchu innych elementów */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Delikatny cieñ */
+    z-index: 1000; /* Na wierzchu innych elementÃ³w */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Delikatny cieÃ± */
     font-size: 14px; /* Rozmiar czcionki */
 }
 
@@ -377,7 +377,33 @@ button {
     margin-right: auto;
 }
 
+.menu-toggle {
+    position: fixed;
+    top: 300px; 
+    left: 0;
+    width: 40px; 
+    height: 150px;
+    background-color: #222;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    z-index: 9999;
+    transition: left 0.5s;
+    font-size: 20px;
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    }
 
+.menu-toggle.active {
+    left: 250px; /* dopasuj do szerokoÅ›ci menu */
+}
+
+.menu-toggle:hover {
+    background-color: #444;
+    
+}
 
 
 
@@ -389,27 +415,27 @@ button {
 
 
 .sidenav {
-    height: 100%; /* Menu na pe³n¹ wysokoœæ */
+    height: 100%; /* Menu na peÂ³nÂ¹ wysokoÅ“Ã¦ */
     width: 30%;
     font-family: 'Ginto Nord', Arial, sans-serif;
-    width: 0; /* Pocz¹tkowa szerokoœæ 0 */
+    width: 0; /* PoczÂ¹tkowa szerokoÅ“Ã¦ 0 */
     position: fixed;
     z-index: 1;
-    top: 0; /* Menu zaczyna siê od góry */
-    left: 0; /* Rozci¹ga siê od lewej strony */
+    top: 0; /* Menu zaczyna siÃª od gÃ³ry */
+    left: 0; /* RozciÂ¹ga siÃª od lewej strony */
     background-color: #dadada;
     overflow-x: hidden;
-    transition: width 0.5s ease; /* P³ynne otwieranie */
-    padding-top: 60px; /* Odstêp od góry */
-    border-right: 2px solid #222; /* Prawa krawêdŸ */
+    transition: width 0.5s ease; /* PÂ³ynne otwieranie */
+    padding-top: 60px; /* OdstÃªp od gÃ³ry */
+    border-right: 2px solid #222; /* Prawa krawÃªdÅ¸ */
 }
 
     .sidenav.open, .menu-bar.open {
-        width: 250px; /* Szerokoœæ paska i menu po wysuniêciu */
+        width: 250px; /* SzerokoÅ“Ã¦ paska i menu po wysuniÃªciu */
     }
     /* Klasa aktywna dla otwarcia menu */
     .sidenav.active {
-        width: 300px; /* Szerokoœæ menu po otwarciu */
+        width: 300px; /* SzerokoÅ“Ã¦ menu po otwarciu */
     }
 
     .sidenav a:hover {
@@ -425,7 +451,7 @@ button {
         cursor: pointer;
     }
 
-/* Style dla boxów */
+/* Style dla boxÃ³w */
 .box2 {
     width: 100%;
     display: flex;
@@ -443,16 +469,16 @@ button {
         height: 75px;
     }
 
-    /* Hover efekt dla boxów */
+    /* Hover efekt dla boxÃ³w */
     .box2:hover {
         background-color: #f0f0f0;
         cursor: pointer;
     }
 
-/* Media Queries dla mniejszych ekranów */
+/* Media Queries dla mniejszych ekranÃ³w */
 @media screen and (max-width: 768px) {
     .menu-bar {
-        width: 50px; /* Wê¿szy pasek na mniejszych ekranach */
+        width: 50px; /* WÃªÂ¿szy pasek na mniejszych ekranach */
     }
 
     .sidenav.open {
@@ -545,13 +571,13 @@ button {
 
 .header_box {
     display: flex;
-    justify-content: center; /* Wyœrodkowanie elementów w boxie */
-    align-items: center; /* Wyœrodkowanie elementów w pionie */
+    justify-content: center; /* WyÅ“rodkowanie elementÃ³w w boxie */
+    align-items: center; /* WyÅ“rodkowanie elementÃ³w w pionie */
     margin-top: 20px;
 }
 .login_menu {
 
-    align-items: center; /* Wyrównanie w pionie */
+    align-items: center; /* WyrÃ³wnanie w pionie */
 
     position: relative;
 
@@ -598,7 +624,7 @@ button {
 }
 
 .toggle_icon.active img {
-    transform: rotate(180deg); /* Obrót o 90 stopni po klikniêciu */
+    transform: rotate(180deg); /* ObrÃ³t o 90 stopni po klikniÃªciu */
 }
 
 
@@ -729,27 +755,27 @@ a:hover {
     }
 
 .sidenav {
-    height: 100%; /* Menu na pe³n¹ wysokoœæ */
+    height: 100%; /* Menu na peÂ³nÂ¹ wysokoÅ“Ã¦ */
     width: 30%;
     font-family: 'Ginto Nord', Arial, sans-serif;
-    width: 0; /* Pocz¹tkowa szerokoœæ 0 */
+    width: 0; /* PoczÂ¹tkowa szerokoÅ“Ã¦ 0 */
     position: fixed;
     z-index: 1;
-    top: 0; /* Menu zaczyna siê od góry */
-    left: 0; /* Rozci¹ga siê od lewej strony */
+    top: 0; /* Menu zaczyna siÃª od gÃ³ry */
+    left: 0; /* RozciÂ¹ga siÃª od lewej strony */
     background-color: #f6f6f6;
     overflow-x: hidden;
-    transition: width 0.5s ease; /* P³ynne otwieranie */
-    padding-top: 60px; /* Odstêp od góry */
-    border-right: 2px solid #222; /* Prawa krawêdŸ */
+    transition: width 0.5s ease; /* PÂ³ynne otwieranie */
+    padding-top: 60px; /* OdstÃªp od gÃ³ry */
+    border-right: 2px solid #222; /* Prawa krawÃªdÅ¸ */
 }
 
     .sidenav.open, .menu-bar.open {
-        width: 250px; /* Szerokoœæ paska i menu po wysuniêciu */
+        width: 250px; /* SzerokoÅ“Ã¦ paska i menu po wysuniÃªciu */
     }
     /* Klasa aktywna dla otwarcia menu */
     .sidenav.active {
-        width: 300px; /* Szerokoœæ menu po otwarciu */
+        width: 300px; /* SzerokoÅ“Ã¦ menu po otwarciu */
     }
 
     .sidenav a:hover {
@@ -775,11 +801,11 @@ a:hover {
     background-color: #0f0f0f;
     transition: background-color 0.9s, box-shadow 0.9s, color 0.9s;
     padding: 8px 20px;
-    height: 85px; /* Sta³a wysokoœæ */
+    height: 85px; /* StaÂ³a wysokoÅ“Ã¦ */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff; /* Tekst bia³y na przezroczystym tle */
+    color: #fff; /* Tekst biaÂ³y na przezroczystym tle */
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -798,34 +824,34 @@ a:hover {
         }
 
 .navbar-brand {
-    display: flex; /* Aby obrazek i tekst by³y obok siebie */
-    align-items: center; /* Wyœrodkowanie w pionie */
-    text-decoration: none; /* Usuñ podkreœlenie */
+    display: flex; /* Aby obrazek i tekst byÂ³y obok siebie */
+    align-items: center; /* WyÅ“rodkowanie w pionie */
+    text-decoration: none; /* UsuÃ± podkreÅ“lenie */
 }
 
     .navbar-brand .navbar-brand-icon {
         height: 70px; /* Rozmiar ikonki */
-        margin-right: 10px; /* Odstêp miêdzy ikon¹ a tekstem */
+        margin-right: 10px; /* OdstÃªp miÃªdzy ikonÂ¹ a tekstem */
         transition: transform 0.3s ease-in-out; /* Animacja przy najechaniu */
         margin-left: -90px;
     }
 
     .navbar-brand .logo-text {
-        font-size: 2rem; /* Powiêkszenie tekstu */
+        font-size: 2rem; /* PowiÃªkszenie tekstu */
         right: 90px;
         font-weight: bold; /* Pogrubienie tekstu */
         color: #fff; /* Kolor tekstu */
         text-transform: uppercase; /* Wielkie litery */
-        transition: color 0.3s ease-in-out; /* P³ynna zmiana koloru */
+        transition: color 0.3s ease-in-out; /* PÂ³ynna zmiana koloru */
     }
 
-    /* Efekt podœwietlenia przy najechaniu */
+    /* Efekt podÅ“wietlenia przy najechaniu */
     .navbar-brand:hover .logo-text {
         color: #ff9000; /* Nowy kolor tekstu przy najechaniu */
     }
 
     .navbar-brand:hover .navbar-brand-icon {
-        transform: scale(1.1); /* Powiêkszenie ikony przy najechaniu */
+        transform: scale(1.1); /* PowiÃªkszenie ikony przy najechaniu */
     }
 /*nav*/
 /* pop up start  */
@@ -1112,11 +1138,11 @@ h2, h3 {
 #pagination {
     display: flex;
     align-items: center;
-    justify-content: center; /* Wyrównanie na œrodku */
+    justify-content: center; /* WyrÃ³wnanie na Å“rodku */
     margin-top: 20px;
-    margin-bottom: 20px; /* Odleg³oœæ od stopki */
-    width: 100%; /* Pe³na szerokoœæ */
-    text-align: center; /* Wyrównanie tekstu w obrêbie kontenera */
+    margin-bottom: 20px; /* OdlegÂ³oÅ“Ã¦ od stopki */
+    width: 100%; /* PeÂ³na szerokoÅ“Ã¦ */
+    text-align: center; /* WyrÃ³wnanie tekstu w obrÃªbie kontenera */
 }
 
 #page-numbers {
@@ -1175,7 +1201,7 @@ h2, h3 {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Odstêpy miêdzy boxami */
+    gap: 20px; /* OdstÃªpy miÃªdzy boxami */
 }
 @media (max-width: 768px) {
     .box_main {
@@ -1185,13 +1211,13 @@ h2, h3 {
 
 @media (max-width: 576px) {
     .box_main {
-        flex: 1 1 100%; /* Jeden box w wierszu na bardzo ma³ych ekranach */
+        flex: 1 1 100%; /* Jeden box w wierszu na bardzo maÂ³ych ekranach */
     }
 }
 
 .main-container {
     margin-top: 40px;
-    max-width: 1500px; /* Wystarczaj¹co szeroki kontener, aby zmieœciæ cztery boxy */
+    max-width: 1500px; /* WystarczajÂ¹co szeroki kontener, aby zmieÅ“ciÃ¦ cztery boxy */
     margin: 0 auto; /* Wycentrowanie kontenera */
 }
 
@@ -1210,7 +1236,7 @@ h2, h3 {
 }
 
     .box_main:hover {
-        transform: scale(1.05); /* Powiêkszenie o 5% */
+        transform: scale(1.05); /* PowiÃªkszenie o 5% */
         box-shadow: 0px 0 30px 10px #d1c0a4;
     }
 
@@ -1337,7 +1363,7 @@ h2, h3 {
 .page_wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Pe³na wysokoœæ okna przegl¹darki */
+    min-height: 100vh; /* PeÂ³na wysokoÅ“Ã¦ okna przeglÂ¹darki */
 }
 
 .input_bt {
@@ -1349,7 +1375,7 @@ h2, h3 {
 }
 
 .main_content {
-    flex: 1; /* Zajmuje ca³¹ dostêpn¹ przestrzeñ nad stopk¹ */
+    flex: 1; /* Zajmuje caÂ³Â¹ dostÃªpnÂ¹ przestrzeÃ± nad stopkÂ¹ */
 }
 
 footer {

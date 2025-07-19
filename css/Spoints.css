@@ -381,7 +381,33 @@ button {
 
 
 
+.menu-toggle {
+    position: fixed;
+    top: 300px; 
+    left: 0;
+    width: 40px; 
+    height: 150px;
+    background-color: #222;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    z-index: 9999;
+    transition: left 0.5s;
+    font-size: 20px;
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    }
 
+.menu-toggle.active {
+    left: 250px; /* dopasuj do szerokości menu */
+}
+
+.menu-toggle:hover {
+    background-color: #444;
+    
+}
 
 
 

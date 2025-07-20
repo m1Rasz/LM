@@ -17,16 +17,18 @@
         ofertyContainer.innerHTML = '';
 
         offersToShow.forEach(oferta => {
-            const ofertaDiv = document.createElement('div');
-            ofertaDiv.classList.add('box_main');
-            ofertaDiv.innerHTML = `
-                <a href="${oferta.link}">
-                    <h4 class="name_text">${oferta.nazwa}</h4>
-                    <p class="price_text">${oferta.cena}</p>
-                </a>
-            `;
-            ofertyContainer.appendChild(ofertaDiv);
-        });
+    const ofertaDiv = document.createElement('div');
+    ofertaDiv.classList.add('box_main');
+    ofertaDiv.innerHTML = `
+        <h4 class="name_text">${oferta.nazwa}</h4>
+        <p class="price_text">${oferta.cena}</p>
+    `;
+    ofertaDiv.addEventListener('click', () => {
+        window.location.href = oferta.link;
+    });
+    ofertaDiv.style.cursor = 'pointer'; // Dodaje "łapkę" przy najechaniu
+    ofertyContainer.appendChild(ofertaDiv);
+});
 
         document.getElementById('prev-btn').disabled = page === 1;
         document.getElementById('next-btn').disabled = end >= allOffers.length;

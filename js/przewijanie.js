@@ -1,7 +1,7 @@
 let currentPage = 1;
 const offersPerPage = 8;
-let allOffers = []; // Przechowuje wszystkie oferty po za³adowaniu
-const maxPages = 5; // Maksymalna liczba stron, które maj¹ byæ widoczne
+let allOffers = []; // Przechowuje wszystkie oferty po zaÂ³adowaniu
+const maxPages = 5; // Maksymalna liczba stron, ktÃ³re majÂ¹ byÃ¦ widoczne
 
 function displayOffers(page) {
     const start = (page - 1) * offersPerPage;
@@ -9,22 +9,24 @@ function displayOffers(page) {
     const offersToShow = allOffers.slice(start, end);
 
     const ofertyContainer = document.getElementById('oferty-container');
-    ofertyContainer.innerHTML = ''; // Czyœci poprzednie oferty
+    ofertyContainer.innerHTML = ''; // CzyÅ“ci poprzednie oferty
 
     offersToShow.forEach(oferta => {
-        const ofertaDiv = document.createElement('div');
-        ofertaDiv.classList.add('box_main');
-        ofertaDiv.innerHTML = `
-            <a href="${oferta.link}">
-                <h4 class="name_text">${oferta.nazwa}</h4>
-                <p class="price_text">${oferta.cena}</p>
-            </a>
-        `;
-        ofertyContainer.appendChild(ofertaDiv);
+    const ofertaDiv = document.createElement('div');
+    ofertaDiv.classList.add('box_main');
+    ofertaDiv.innerHTML = `
+        <h4 class="name_text">${oferta.nazwa}</h4>
+        <p class="price_text">${oferta.cena}</p>
+    `;
+    ofertaDiv.addEventListener('click', () => {
+        window.location.href = oferta.link;
     });
+    ofertaDiv.style.cursor = 'pointer'; // Dodaje "Å‚apkÄ™" przy najechaniu
+    ofertyContainer.appendChild(ofertaDiv);
+});
 
 
-    document.getElementById('page-number').style.display = 'none'; // Ukrywa numer strony, jeœli nie chcesz go wyœwietlaæ
+    document.getElementById('page-number').style.display = 'none'; // Ukrywa numer strony, jeÅ“li nie chcesz go wyÅ“wietlaÃ¦
     document.getElementById('prev-btn').disabled = page === 1;
     document.getElementById('next-btn').disabled = end >= allOffers.length;
     generatePageNumbers(page);
@@ -33,7 +35,7 @@ function displayOffers(page) {
 function generatePageNumbers(currentPage) {
     const totalPages = Math.ceil(allOffers.length / offersPerPage);
     const paginationContainer = document.getElementById('page-numbers');
-    paginationContainer.innerHTML = ''; // Czyœci poprzedni¹ numeracjê
+    paginationContainer.innerHTML = ''; // CzyÅ“ci poprzedniÂ¹ numeracjÃª
 
     let startPage = Math.max(1, currentPage - Math.floor(maxPages / 2));
     let endPage = Math.min(totalPages, startPage + maxPages - 1);
@@ -53,14 +55,14 @@ function generatePageNumbers(currentPage) {
     }
 }
 
-// Pobiera oferty i uruchamia paginacjê
+// Pobiera oferty i uruchamia paginacjÃª
 fetch('oferty.json')
     .then(response => response.json())
     .then(data => {
         allOffers = data; // Zapisz wszystkie oferty do zmiennej
-        displayOffers(currentPage); // Wyœwietl pierwsz¹ stronê ofert
+        displayOffers(currentPage); // WyÅ“wietl pierwszÂ¹ stronÃª ofert
 
-        // Obs³uga przycisków do zmiany stron
+        // ObsÂ³uga przyciskÃ³w do zmiany stron
         document.getElementById('prev-btn').addEventListener('click', () => {
             if (currentPage > 1) {
                 currentPage--;
@@ -76,4 +78,4 @@ fetch('oferty.json')
             }
         });
     })
-    .catch(error => console.error('B³¹d przy wczytywaniu ofert:', error));
+    .catch(error => console.error('BÂ³Â¹d przy wczytywaniu ofert:', error));
